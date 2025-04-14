@@ -7,34 +7,19 @@ This project provides numerical solutions to initial-boundary-value problems for
 
 ## Project Overview
 
-This repository contains Python implementations for solving four distinct problems related to PDEs:
+This repository contains Python numnerical implementations for solving two distinct problems related to PDEs:
 
-1. **Stability and Convergence Analysis for Hyperbolic PDEs**  
-   - Analyzes the stability of the Forward Time Centered Space (FTCS) scheme.  
-   - Implements and demonstrates the convergence of the Lax-Friedrichs scheme.
-
-2. **Explicit Scheme for the Heat Equation**  
+1. **Explicit Scheme for the Heat Equation**  
    - Solves the heat equation using the FTCS scheme with Dirichlet boundary conditions.  
    - Analyzes temporal and spatial convergence rates.
 
-3. **Implicit Schemes for the Heat Equation**  
+2. **Implicit Schemes for the Heat Equation**  
    - Implements Backward Time Centered Space (BTCS) and Crank-Nicolson schemes.  
    - Compares their convergence rates with the explicit FTCS scheme.
-
-4. **Order of Accuracy for PDE Schemes**  
-   - Determines the order of accuracy for FTCS and Centered Time Centered Space (CTCS) schemes applied to convection-diffusion and hyperbolic PDEs.
 
 ---
 
 ## Problem Descriptions
-
-### Problem 1: Hyperbolic PDE
-Solve the linear hyperbolic PDE:  
-\[
-\frac{\partial U}{\partial t} + a \frac{\partial U}{\partial x} = 0
-\]
-- **(a)** Analyze the stability of the FTCS scheme.  
-- **(b)** Implement the Lax-Friedrichs scheme and verify its convergence in the sup-norm for \( |a \Delta t / \Delta x| \leq 1 \).
 
 ### Problem 2: Heat Equation with Explicit Scheme
 Solve the heat equation:  
@@ -52,19 +37,9 @@ Solve the same heat equation as Problem 2 using:
 - The Crank-Nicolson scheme.  
 Compare their convergence rates with the FTCS scheme at \( t = 0.1 \).
 
-### Problem 4: Order of Accuracy
-Determine the order of accuracy for:  
-- FTCS and CTCS schemes applied to:  
-  - Convection-diffusion: \( \frac{\partial U}{\partial t} + a \frac{\partial U}{\partial x} = \nu \frac{\partial^2 U}{\partial x^2} \)  
-  - Hyperbolic: \( \frac{\partial U}{\partial t} + a \frac{\partial U}{\partial x} = 0 \)
-
 ---
 
 ## Solution Highlights
-
-### Problem 1
-- **(a)** FTCS is unconditionally unstable for hyperbolic PDEs (via von Neumann analysis).  
-- **(b)** Lax-Friedrichs scheme is stable and convergent under \( |a \Delta t / \Delta x| \leq 1 \).
 
 ### Problem 2
 - FTCS scheme implemented for the heat equation.  
@@ -74,14 +49,6 @@ Determine the order of accuracy for:
 - BTCS: First-order in time, second-order in space.  
 - Crank-Nicolson: Second-order in both time and space.  
 - Visual and quantitative comparisons provided.
-
-### Problem 4
-- Convection-diffusion:  
-  - FTCS: \( O(\Delta t) + O(\Delta x^2) \)  
-  - CTCS: \( O(\Delta t^2) + O(\Delta x^2) \)  
-- Hyperbolic:  
-  - FTCS: \( O(\Delta t) + O(\Delta x^2) \)  
-  - CTCS: \( O(\Delta t^2) + O(\Delta x^2) \)
 
 ---
 
@@ -119,7 +86,6 @@ Determine the order of accuracy for:
   - BTCS and Crank-Nicolson: Unconditionally stable for the heat equation.  
 
 - **Convergence**:  
-  - Lax-Friedrichs converges for hyperbolic PDEs when \( |a \Delta t / \Delta x| \leq 1 \).  
   - Heat equation schemes match theoretical convergence rates.
 
 - **Accuracy**:  
