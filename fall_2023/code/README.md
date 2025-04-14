@@ -93,7 +93,7 @@ u'(x_j) \approx \frac{-3 u(x_j) + 4 u(x_j + \Delta x) - u(x_j + 2\Delta x)}{2 \D
 ## Usage
 
 1. **Requirements:**  
-   Ensure Python 3.x is installed along with [NumPy](https://numpy.org/) and [Matplotlib](https://matplotlib.org/).
+   Ensure Python 3.13.3 is installed along with [NumPy](https://numpy.org/) and [Matplotlib](https://matplotlib.org/).
 
 2. **Running the Scripts:**  
    Run the individual Python scripts to generate solutions and plots. For example:
